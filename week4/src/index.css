@@ -1,0 +1,61 @@
+body{
+    background-color: #22254b;
+}
+
+
+.app-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px ; 
+}
+
+
+.movie-container{
+    width: 250px;
+
+    
+    background-color: #3b3ea1;
+    border-radius: 5px;
+  
+    position: relative;
+    color: white;
+}
+
+.movie-container img {
+    max-width: 100%;
+}
+.movie-info{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.movie-info h4{
+    margin: 0;
+}
+
+.movie-info span{
+    margin-left: 3px;
+}
+
+
+
+.movie-container .over{
+
+
+    position : absolute;
+    height: 100%;
+    top: 0; 
+    left :0;  
+    padding: 30px;
+    opacity: 60%;
+    background-color: black;
+}
+.over .mkTitle {
+    
+    font-size: larger;
+    font-weight: 400;
+    color: white;
+
+}
