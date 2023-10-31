@@ -1,0 +1,59 @@
+main{
+    
+    width: 600px;
+    height: 400px;
+   
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(181, 181, 181, 0.3);
+}
+.login_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size: 50px;
+    display: grid;
+    place-content: center;
+}
+#username{
+    background-color: rgba(128, 128, 128, 0);
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+}
+.white_line{    
+
+    border-top: 1px solid white;
+    height: 0;
+    width: 60%;
+
+}
+.inputsetting{
+    display: grid;
+    place-content: center;
+}
+#password{
+    background-color: rgba(128, 128, 128, 0);
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+}
+button{
+   padding: 15px 45px;
+   font-size: 20px;
+   margin:auto;
+   display: block;
+   background-color: rgb(58, 57, 57);
+   color:white;
+}
+.register{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
