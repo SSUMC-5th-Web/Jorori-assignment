@@ -2,31 +2,26 @@ import React, { useState } from "react";
 
 export default function LoginControl() {
 
-    const [logIn,setLogIn] = useState(true);
-    const [btn, setBtnName] = useState("로그인");
-    const [message, setMessage] = useState("로그인 해주세요!");
+    const [logIn,setLogIn] = useState(false);
+
 
     const makeLogIn = () =>{
         setLogIn(true);
-        setBtnName("로그인");
-        setMessage("로그인 해주세요!");
     };
     
     const makeLogOut = () =>{
         setLogIn(false);
-        setBtnName("로그아웃");
-        setMessage("환영합니다!");
+
         
     };
-
-  
+   
   
     return <div className="logInBar">
     <button className="loginBtn"  onClick={logIn ? makeLogOut : makeLogIn}>
-    {btn}
+      {logIn ? "로그아웃" : "로그인" }
     </button>
     <div className="messageSend">
-        {message}
+        {logIn ? "환영합니다" : "로그인 하세요"}
     </div>
     </div>;
 }

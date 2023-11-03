@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link } from 'react-router-dom';
 import LoginControl from './LoginControl';
-import messageSend from './LoginControl'
 export default function Header() {
   return (
     <div className="header-container">
@@ -36,9 +35,7 @@ export default function Header() {
                     <li>
                         <LoginControl/>
                     </li>
-                    <li>
-                        {messageSend}
-                    </li>
+                    
                 </ul>
             </div>
         </div>
