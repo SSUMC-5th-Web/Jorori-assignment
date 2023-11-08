@@ -11,8 +11,7 @@ export default function MovieDetail() {
   
   return <Content.PageContainer>
         <Content.PosterFull>
-        <Content.PosterImg src={IMG_BASE_URL+ state.poster_path} alt='영화포스터'/>
-    
+      <Content.PosterImg src={IMG_BASE_URL+ state.poster_path} alt='영화포스터'/>
       <Content.PosterName>
         {state.title}
       </Content.PosterName>
