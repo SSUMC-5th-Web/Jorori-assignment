@@ -1,13 +1,14 @@
 import React from 'react';
-
+import *as Content from '../components/Movie.style'
 import Ad from "../components/Ad";
 
 export default function Home() {
  
       return(
-        <div>
+        
+        <Content.Home>
           <Ad/>
-        </div>
-      );
+        </Content.Home>
+      )
     }       
   

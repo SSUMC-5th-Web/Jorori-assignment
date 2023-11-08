@@ -52,3 +52,27 @@ margin: 0;
 export const Voting = styled.span`
 margin-left: 3px;
 `;
+export const PageContainer = styled.div`
+    background-color: #cdcdee;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+`;
+
+export const PosterImg = styled.img`
+  height  : 800px ;
+  width: 600px;
+
+`;
+export const PosterName = styled.div`
+    font-size: x-large;
+
+`;
+export const PosterFull = styled.div`
+    display: grid;
+    place-items: center;
+`;
+export const Home = styled.div`
+height: 100%;
+background-color: #506ef1;
+`;

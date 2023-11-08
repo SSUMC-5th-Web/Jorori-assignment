@@ -1,4 +1,3 @@
-
 import {BrowserRouter, Route, Routes } from "react-router-dom";
 import Celebrity from "./pages/Celebrity";
 import Home from "./pages/Home";
@@ -6,20 +5,19 @@ import Tv from "./pages/Tv";
 import Movies from "./pages/Movies";
 import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
-import {id} from "./movieDummy";
 import MovieDetail from "./pages/MovieDetail";
 
 
 
 function App() {
-  const id = {id};
+
 
   return (
     <div className="root-wrap">
       <BrowserRouter>
       <Header />
       <Routes>
-        <Route exact path="/movie/:id" element={<MovieDetail />}/>
+        <Route path="/movie/:id" element={<MovieDetail />}/>
         <Route path="/" element={<Home />}/>
         <Route path="/movie" element={<Movies />}/>
         <Route path="/tv" element={<Tv />}/>
