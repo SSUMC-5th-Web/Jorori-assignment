@@ -4,21 +4,19 @@ import AdPage from "./AdPage";
 export default function Ad() {
     
     const [on, setOn] = useState(true);
-    const [btn, setBtn] = useState("광고 안보기");
-    const turnOn = () =>{
+    
+    const makeOn = () => {
         setOn(true);
-        setBtn("광고 안보기");
-
     };
-    const turnOff = () =>{
+    const makeOff = () =>{
         setOn(false);
-        setBtn("광고 보기");
     };
+    
 
     return <div>
         {on ? <AdPage/> : <> </>}
-        <button onClick={on ? turnOff : turnOn}>
-            {btn}
+        <button onClick={on ? makeOff : makeOn}>
+            {on? "광고 안보기" : "광고 보기"}
         </button>
     </div>;
 }

@@ -11,8 +11,6 @@ export default function LoginControl() {
     
     const makeLogOut = () =>{
         setLogIn(false);
-
-        
     };
    
   
