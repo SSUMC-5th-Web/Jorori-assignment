@@ -6,6 +6,7 @@ import Movies from "./pages/Movies";
 import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import MovieDetail from "./pages/MovieDetail";
+import Login from "./pages/Login";
 
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/tv" element={<Tv />}/>
         <Route path="/person" element={<Celebrity />}/>
         <Route path="/*" element={<NotFound />}/>
+        <Route path="/Login" element={<Login />}/>
       </Routes>
     </BrowserRouter>
     </div>

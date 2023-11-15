@@ -1,7 +1,11 @@
-import React from 'react'
+import { useState } from 'react';
 import {Link } from 'react-router-dom';
 import LoginControl from './LoginControl';
+import Login from '../pages/Login';
 export default function Header() {
+
+    const [logIn,setLogIn] = useState(false);
+    
   return (
     <div className="header-container">
         <div className='header-wrap'>

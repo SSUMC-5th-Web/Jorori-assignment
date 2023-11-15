@@ -1,25 +1,34 @@
 import React, { useState } from "react";
+import {useNavigate} from 'react-router-dom';
 
-export default function LoginControl() {
 
-    const [logIn,setLogIn] = useState(false);
+export default function LoginControl(props) {
+
+
+    const navigate = useNavigate();
+
+  
 
 
     const makeLogIn = () =>{
-        setLogIn(true);
+        // setLogIn(true);
+      
+        navigate(`/Login`,{
+            state : props
+        });
     };
     
     const makeLogOut = () =>{
-        setLogIn(false);
+    //   setLogIn(false);
+  
     };
-   
   
     return <div className="logInBar">
-    <button className="loginBtn"  onClick={logIn ? makeLogOut : makeLogIn}>
-      {logIn ? "로그아웃" : "로그인" }
+    <button className="loginBtn"  onClick={props.logIn ? makeLogOut : makeLogIn}>
+      {props.logIn ? "로그아웃" : "로그인" }
     </button>
     <div className="messageSend">
-        {logIn ? "환영합니다" : "로그인 하세요"}
+        {props.logIn? "환영합니다" : "로그인 하세요"}
     </div>
     </div>;
 }
