@@ -1,26 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import {useNavigate} from 'react-router-dom';
-
 
 export default function LoginControl(props) {
 
 
     const navigate = useNavigate();
 
-  
-
-
     const makeLogIn = () =>{
-        // setLogIn(true);
       
-        navigate(`/Login`,{
-            state : props
-        });
+        navigate(`/Login`);
     };
     
     const makeLogOut = () =>{
-    //   setLogIn(false);
-  
+        props.setLogIN(false);
     };
   
     return <div className="logInBar">

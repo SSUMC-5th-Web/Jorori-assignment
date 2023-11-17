@@ -9,7 +9,7 @@ export default function Login(props) {
   const navigate = useNavigate();
   const [id,setId] = useState("");
   const [password,setPassword] = useState("");
-  const [logIn,setLogIn] = useState(false);
+ 
 
 
   
@@ -21,13 +21,10 @@ export default function Login(props) {
     setPassword(event.currentTarget.value);
   };
   const onAccept = () =>{
-    navigate(`/`,{
-      state : props
-  })
+    props.setLogIN(true);
+    navigate(`/`);
   };
-  const onGood = () =>{
-    setLogIn(true);
-  }
+ 
 
   return (
   <Content.BigLogin>
@@ -43,7 +40,7 @@ export default function Login(props) {
   {id&&password?<button id="AcceptBtn" onClick={onAccept} >
     {"확인"}
   </button> : <button id="AcceptBtn" disabled>
-    {"확인"}{onGood}
+    {"확인"}
   </button>}
   </Content.BigForm>
   </Content.BigLogin>

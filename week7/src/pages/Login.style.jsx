@@ -16,6 +16,6 @@ export const Title = styled.div`
     
 `;
 export const StyleForInput = styled.input`
-    width: 400dp;
-    size: 300dp;
+    width: 800px;
+
 `;

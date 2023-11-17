@@ -7,16 +7,17 @@ import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import MovieDetail from "./pages/MovieDetail";
 import Login from "./pages/Login";
-
+import { useState } from "react";
 
 
 function App() {
+  const [logIn,setLogIN]=useState(false);
 
 
   return (
     <div className="root-wrap">
       <BrowserRouter>
-      <Header />
+      <Header logIn={logIn} setLogIN={setLogIN} />
       <Routes>
         <Route path="/movie/:id" element={<MovieDetail />}/>
         <Route path="/" element={<Home />}/>
@@ -24,7 +25,7 @@ function App() {
         <Route path="/tv" element={<Tv />}/>
         <Route path="/person" element={<Celebrity />}/>
         <Route path="/*" element={<NotFound />}/>
-        <Route path="/Login" element={<Login />}/>
+        <Route path="/Login" element={<Login logIn={logIn} setLogIN={setLogIN} />}/>
       </Routes>
     </BrowserRouter>
     </div>

@@ -1,11 +1,9 @@
-import { useState } from 'react';
+
 import {Link } from 'react-router-dom';
 import LoginControl from './LoginControl';
-import Login from '../pages/Login';
-export default function Header() {
+export default function Header(props) {
 
-    const [logIn,setLogIn] = useState(false);
-    
+
   return (
     <div className="header-container">
         <div className='header-wrap'>
@@ -37,7 +35,7 @@ export default function Header() {
 
                     </li>
                     <li>
-                        <LoginControl/>
+                        <LoginControl logIn={props.logIn} setLogIN={props.setLogIN}/>
                     </li>
                     
                 </ul>
